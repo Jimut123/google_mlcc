@@ -1,0 +1,15 @@
+runtime: python27
+api_version: 1
+threadsafe: false
+
+handlers:
+- url: /request
+  script: back-end.app
+
+- url: /
+  static_files: front-end/main.html
+  upload: front-end/main.html
+
+- url: /(.*)$
+  static_files: front-end/\1
+  upload: front-end/(.*)$

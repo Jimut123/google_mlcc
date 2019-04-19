@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Set page title and favicon -->
+  <title>Google Image Analysis</title>
+  <link href="https://www.google.co.uk/images/branding/product/ico/googleg_lodp.ico" rel="shortcut icon">
+  <!-- Load fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Use CSS -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="grid">
+  <!-- Split the page vertically in half -->
+  <div class="column two-third">
+    <!-- Left half -->
+    <h1>
+      Image Analysis
+    </h1>
+    <div>
+      <!-- Text box for image URI to be typed -->
+      Image URL: <input type="text" id="img_uri" style="width: 60%;"><br>
+      <!-- Tick boxes to request features -->
+      <div class="grid">
+        <div class="column half">
+          <div class="module lighter">
+            <input type="checkbox" class="requestbox" id="LABEL_DETECTION"> Label Detection<br>
+            <input type="checkbox" class="requestbox" id="FACE_DETECTION"> Face Detection<br>
+            <input type="checkbox" class="requestbox" id="TEXT_DETECTION"> Text Detection<br>
+            <input type="checkbox" class="requestbox" id="LANDMARK_DETECTION"> Landmark Detection<br>
+          </div>
+        </div>
+        <div class="column half">
+          <div class="module lighter">
+            <input type="checkbox" class="requestbox" id="LOGO_DETECTION"> Logo Detection<br>
+            <input type="checkbox" class="requestbox" id="WEB_DETECTION"> Web Detection<br>
+            <input type="checkbox" class="requestbox" id="SAFE_SEARCH_DETECTION"> Safe Search Detection<br>
+          </div>
+        </div>
+      </div>
+      <!-- Go button to make request -->
+      <input type="button" id="go" value="Go!"><br>
+    </div>
+    <!-- Space to show result of request -->
+    <div id="result">
+    </div><br>
+  </div>
+  <!-- Right half -->
+  <div class="column third">
+    <!-- Space to display image when requested -->
+    <div id="img">
+    </div>
+  </div>
+</div>
+
+<!-- Load jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Script to make the request -->
+<script src="main.js"></script>
+</body>
+</html>
